@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futures Fashion</title>
+    <link rel="stylesheet" href="firstpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <div class="header">
+      <div class="logo">
+        <h1><a href="#"><img src="" alt="">Futures Fashion</a></h1>
+      </div>
+      <div class="search">
+        <form>
+          
+          <button class="searchbtn"><input type="text" placeholder="Search Here"><a href="search"><i class="fa fa-search"></i></a></a></i></button>
+        </form>
+      </div>
+      <div class="icons">
+        <a href="#" class="fa fa-heart"><p>Liked</p></a>
+        <a href="#" class="fa fa-shopping-cart"><p>Cart</p></a>
+        <a href="login.html" class="fa fa-user"><p>Login</p></a>
+        <a href="#" class="fa fa-bars"><p>More</p></a>
+      </div>
+    </div>
+    <div class="links">
+      <a href="#">baby</a>
+      <a href="#">boys</a>
+      <a href="#">teens</a>
+      <a href="#">mens</a>
+      <!-- <a href="#">footwear</a>
+      <a href="#">accessories</a> -->
+    </div>
+
+    <script>
+      document.getElementsByClassName("fa") [4].addEventListener(
+        "click",function(){
+          document.getElementsByClassName("links") [0].classList.toggle
+          ("showmylinks");
+        }
+      )
+    </script>
+    
+    
+    <section class="slideshow">
+      <div class="slider">
+        <div class="myslides fade" style="display: block;">
+            <div class="slidetxt">
+                <h1></h1>
+                <p></p>
+            </div>
+            <img src="1.png" alt="" style="width: 100%; height:300px;">
+        </div>
+        <div class="myslides fade">
+            <div class="slidetxt">
+                <h1></h1>
+                <p></p>
+            </div>
+            <img src="2.png" alt="" style="width: 100%; height:300px;">
+        </div>
+        <div class="myslides fade">
+            <div class="slidetxt">
+                <h1></h1>
+                <p></p>
+            </div>
+            <img src="3.jpg" alt="" style="width: 100%; height:300px;">
+        </div>
+        <div class="myslides fade">
+            <div class="slidetxt">
+                <h1></h1>
+                <p></p>
+            </div>
+            <img src="4.jpg" alt="" style="width: 100%; height:300px;">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+        <div class="dotsbox" style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+  
+  <!-- scriptjs -->
+  
+  <script>
+    const myslide = document.querySelectorAll('.myslides'),
+          dot = document.querySelectorAll('.dot');
+  
+    let counter = 1;
+    slidefun(counter);
+  
+    let timer = setInterval(autoslide, 2000);
+    function autoslide() {
+        counter += 1;
+        slidefun(counter);
+    }
+    function plusSlides(n) {
+        counter += n;
+        slidefun(counter);
+        resetTimer();
+    }
+    function currentSlide(n) {
+        counter = n;
+        slidefun(counter);
+        resetTimer();
+    }
+    function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(autoslide, 2000);
+    }
+    function slidefun(n) {
+        let i;
+        for(i = 0;i<myslide.length;i++){
+            myslide[i].style.display = "none";
+        }
+        for(i = 0;i<dot.length;i++){
+            dot[i].classList.remove('active');
+        }
+        if(n > myslide.length){
+            counter = 1;
+        }
+        if(n < 1){
+            counter = myslide.length;
+        }
+        myslide[counter - 1].style.display = "block";
+        dot[counter - 1].classList.add('active');
+    }
+  </script>
+    </section>
+
+    <div class="product-heading"><h1>Kids Wear</h1>
+    <div class="product-container">
+      <div class="card">
+        <div class="imgBx">
+            <img src="images (2).jpg" alt="">
+            <h2>Mens T-shirts</h2>
+        </div>
+        <div class="content">
+            <div class="size">
+                <!-- <h3>Size :</h3> -->
+                <span>S</span>
+                <span>M</span>
+                <span>L</span>
+                <span>Xl</span>
+            </div>
+            <h3>Price : $499</h3>
+            <button>Add to cart</button>
+        </div>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+          <img src="images (2).jpg" alt="">
+          <h2>Mens T-shirts</h2>
+      </div>
+      <div class="content">
+          <div class="size">
+              <!-- <h3>Size :</h3> -->
+              <span>S</span>
+              <span>M</span>
+              <span>L</span>
+              <span>Xl</span>
+          </div>
+          <h3>Price : $499</h3>
+          <button>Add to cart</button>
+      </div>
+  </div>
+  <div class="card">
+    <div class="imgBx">
+        <img src="images (2).jpg" alt="">
+        <h2>Mens T-shirts</h2>
+    </div>
+    <div class="content">
+        <div class="size">
+            <!-- <h3>Size :</h3> -->
+            <span>S</span>
+            <span>M</span>
+            <span>L</span>
+            <span>Xl</span>
+        </div>
+        <h3>Price : $499</h3>
+        <button>Add to cart</button>
+    </div>
+</div>
+<div class="card">
+  <div class="imgBx">
+      <img src="images (2).jpg" alt="">
+      <h2>Mens T-shirts</h2>
+  </div>
+  <div class="content">
+      <div class="size">
+          <!-- <h3>Size :</h3> -->
+          <span>S</span>
+          <span>M</span>
+          <span>L</span>
+          <span>Xl</span>
+      </div>
+      <h3>Price : $499</h3>
+      <button>Add to cart</button>
+  </div>
+</div>
+<div class="show">
+  <button class="view"><a href="img gallery.html">View More ➔</a></button>
+</div>
+</div>
+</div>
+
+
+<div class="product-heading"><h1>Boys Wear</h1>
+<div class="product-container">
+  <div class="card">
+    <div class="imgBx">
+        <img src="images (2).jpg" alt="">
+        <h2>Mens T-shirts</h2>
+    </div>
+    <div class="content">
+        <div class="size">
+            <!-- <h3>Size :</h3> -->
+            <span>S</span>
+            <span>M</span>
+            <span>L</span>
+            <span>Xl</span>
+        </div>
+        <h3>Price : $499</h3>
+        <button>Add to cart</button>
+    </div>
+</div>
+<div class="card">
+  <div class="imgBx">
+      <img src="images (2).jpg" alt="">
+      <h2>Mens T-shirts</h2>
+  </div>
+  <div class="content">
+      <div class="size">
+          <!-- <h3>Size :</h3> -->
+          <span>S</span>
+          <span>M</span>
+          <span>L</span>
+          <span>Xl</span>
+      </div>
+      <h3>Price : $499</h3>
+      <button>Add to cart</button>
+  </div>
+</div>
+<div class="card">
+<div class="imgBx">
+    <img src="images (2).jpg" alt="">
+    <h2>Mens T-shirts</h2>
+</div>
+<div class="content">
+    <div class="size">
+        <!-- <h3>Size :</h3> -->
+        <span>S</span>
+        <span>M</span>
+        <span>L</span>
+        <span>Xl</span>
+    </div>
+    <h3>Price : $499</h3>
+    <button>Add to cart</button>
+</div>
+</div>
+<div class="card">
+<div class="imgBx">
+  <img src="images (2).jpg" alt="">
+  <h2>Mens T-shirts</h2>
+</div>
+<div class="content">
+  <div class="size">
+      <!-- <h3>Size :</h3> -->
+      <span>S</span>
+      <span>M</span>
+      <span>L</span>
+      <span>Xl</span>
+  </div>
+  <h3>Price : $499</h3>
+  <button>Add to cart</button>
+</div>
+</div>
+<div class="show">
+<button class="view"><a href="img gallery.html">View More ➔</a></button>
+</div>
+</div>
+</div>
+    
+<div class="product-heading"><h1>Mens Wear</h1>
+<div class="product-container">
+  <div class="card">
+    <div class="imgBx">
+        <img src="images (2).jpg" alt="">
+        <h2>Mens T-shirts</h2>
+    </div>
+    <div class="content">
+        <div class="size">
+            <!-- <h3>Size :</h3> -->
+            <span>S</span>
+            <span>M</span>
+            <span>L</span>
+            <span>Xl</span>
+        </div>
+        <h3>Price : $499</h3>
+        <button>Add to cart</button>
+    </div>
+</div>
+<div class="card">
+  <div class="imgBx">
+      <img src="images (2).jpg" alt="">
+      <h2>Mens T-shirts</h2>
+  </div>
+  <div class="content">
+      <div class="size">
+          <!-- <h3>Size :</h3> -->
+          <span>S</span>
+          <span>M</span>
+          <span>L</span>
+          <span>Xl</span>
+      </div>
+      <h3>Price : $499</h3>
+      <button>Add to cart</button>
+  </div>
+</div>
+<div class="card">
+<div class="imgBx">
+    <img src="images (2).jpg" alt="">
+    <h2>Mens T-shirts</h2>
+</div>
+<div class="content">
+    <div class="size">
+        <!-- <h3>Size :</h3> -->
+        <span>S</span>
+        <span>M</span>
+        <span>L</span>
+        <span>Xl</span>
+    </div>
+    <h3>Price : $499</h3>
+    <button>Add to cart</button>
+</div>
+</div>
+<div class="card">
+<div class="imgBx">
+  <img src="images (2).jpg" alt="">
+  <h2>Mens T-shirts</h2>
+</div>
+<div class="content">
+  <div class="size">
+      <!-- <h3>Size :</h3> -->
+      <span>S</span>
+      <span>M</span>
+      <span>L</span>
+      <span>Xl</span>
+  </div>
+  <h3>Price : $499</h3>
+  <button>Add to cart</button>
+</div>
+</div>
+<div class="show">
+<button class="view"><a href="img gallery.html">View More ➔</a></button>
+</div>
+</div>
+</div>
+  
+
+    <div class="ads2">
+      <div class="ads2txt">
+        <h1>Get 50% Off on Boys T-Shirt</h1>
+        <div class="ads2txtcont">
+          <h3>Grab Your Deals On Now<br>Exciting Offers On Each products <br>Flat Discount Each & Every Products</h3>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="shoe">
+            <img src="images (1).jpg" alt="">
+        </div>
+        <div class="content">
+            <span>Upto</span>
+            <h3>50% Off</h3>
+            <p>offre ends in 5 days</p>
+            <a href="img gallery.html" class="btn">View offer</a>
+        </div>
+        <div class="women">
+            <!-- <img src="images/banimg1.jpg"> -->
+        </div>
+      </div>
+    </div>
+    
+  
+  <center>
+    <div class="faq">
+      <h2 style="background-color: yellowgreen;">Why Choose Our Store</h2>
+    <div class="why">
+      <img src="van.jpg" alt="">
+      <p style="padding: 5px;">Free Shipping <br>Fastest and Safe Shipping All Over India</p>
+    </div>
+    <div class="why">
+      <img src="quality img1.png" alt="">
+      <p style="padding: 5px;">Quality <br> 100% Quality Assurance and Well Quality Clothes</p>
+    </div>
+    <div class="why">
+      <img width="200px" src="payment1.png" alt="">
+      <p style="padding: 5px;">Payments <br> Safe Payment Method and Cash On Deliver Available</p>
+    </div>
+    <div class="why">
+      <img width="200px" src="support.jpg" alt="">
+      <p style="padding: 5px;">24/7 Support <br> 24/7 Customer Support & Services </p>
+    </div>
+    </div>
+  </center>
+
+    <!-- <div class="vdad">
+      <video class="mp4" autoplay muted controls src="images/advideo.mp4" height="200px"></video>
+      <div class="overlay"></div>
+    </div> -->
+
+    <div  class="brand">
+      <button class="collapsible">More About Futures Fashion </button>
+
+      <div class="collapse-content">
+        <div>
+          <h2>Futures Fashion: Affordable Online Shopping at Your Fingertips</h2><br>
+          <p>There are many benefits of shopping online. You can take your time and look at different options to find exactly what you want. It's easy to compare prices online and find exactly what you are looking for. And now with Futures Fashion, you can shop for anything you want at the lowest prices in the market. Even if you want to shop for cool gifts for your friends and family, there are many options that you can find on the Internet.</p>
+        </div><br>
+  
+        <div>
+          <h2>Cute and Trendy Kidswear Collection</h2><br>
+          <p>Kids grow so fast, it feels like you're constantly buying new clothes for them! Whether you're looking for the latest trends or just want something practical and affordable, our kidswear collection has got you covered. You'll find everything from rompers and dresses for girls to sets and jeans for boys. Plus, we have ethnic wear and accessories for kids of all ages. And don't forget to check out our baby care collection for all the basic products for baby care</p>
+        </div><br>
+  
+        <div>
+          <h2>Men's Ethnic Wear</h2><br>
+          <p>Do you need a new Sherwani? Are you heading to a wedding and want to look your best? If you answered yes, look no further than our latest men’s ethnic wear collection! Whether you want a Kurta set, Pajamas, Sherwani set, or any other Indian attire, we have an array of budget-friendly styles that are sure to fit your needs.</p>
+        </div><br>
+  
+        <div>
+          <h2>Men’s Western Wear</h2><br>
+          <p>Through our large selection of menswear products we offer, you’re sure to find something you love. We have a vast collection of t-shirts, jeans, polos, coats, and shirts. We have sizes in stock that fit any man’s body type, and the best news of all is that they’re all affordable. We make it easy to find exactly what you’re looking for, too. Our search tool lets you filter our selection down by size, color, material, and more.</p>
+        </div><br>
+  
+        <div>
+          <h2>Don't Miss Out! Start Shopping Online on Futures Fashion Now</h2><br>
+          <p>Futures Fashion offers multiple payment options including debit and credit cards, UPI, and COD to help you with a smooth checkout process. If you are unhappy with any of the products you order you can immediately return them and get a full refund with no questions asked. In case you have any queries or concerns, simply send us an email at help@ffashion.com. Or you can contact us on social media through Facebook, Instagram, or Twitter. We're here to help you!</p>
+        </div><br>
+      </div>
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+for (i = 0; i < coll.length; i++) {
+coll[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var content = this.nextElementSibling;
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+});
+}
+    </script>
+
+    <section class="testimonials">
+      <div class="testi-container">
+        <div class="section-header">
+          <h2 class="testi-title">Reviews By Our Customers</h2>
+        </div>
+        <div class="testimonials-content">
+          <div class="swiper testimonials-slider js-testimonials-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="" alt="img">
+                  <div class="text-box">
+                    <h3 class="name">John doe</h3>
+                    <span class="job">developer</span>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia labore repudiandae qui. Eos, illum nemo!</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination js-testimonials-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.js-testimonials-slider', {
+        grabcursor:true,
+        spaceBetween:30,
+        pagination:{
+          el: '.js-testimonials-pagination',
+          clickable:true
+        },
+        breakpoints:{
+          767:{
+            slidesPerView: 2
+          }
+        }
+      })
+    </script>
+
+
+    <!-- Footer html -->
+    <footer>
+      <div class="footercontent">
+        <div class="footertop">
+          <div class="footerlogo">
+            <i class="fa fa-slack"></i>
+            <span class="logoname">Futures Fashion</span>
+          </div>
+          <div class="footericons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footerlink">
+          <ul class="footlink-box">
+            <li class="linkbox-name">Company</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">summa</a></li>
+          </ul>
+          <ul class="footlink-box">
+            <li class="linkbox-name">FAQ'S</li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Quality</a></li>
+            <li><a href="#">Our Service</a></li>
+          </ul>
+          <ul class="footlink-box">
+            <li class="linkbox-name">Company</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">summa</a></li>
+          </ul>
+          <ul class="footlink-box">
+            <li class="linkbox-name">Help</li>
+            <li><a href="#">Return</a></li>
+            <li><a href="#">Cancellation</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Return</a></li>
+          </ul>
+          <ul class="footlink-box input-box">
+            <li class="linkbox-name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email"></li>
+            <li><input type="button" value="Subscribe"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerbottom">
+        <div class="footbot-txt">
+          <span class="copyright_text">Copyright &#169; 2024 <a href="#">Futures Fashion.</a>All Rights Reserved</span>
+          <span class="Policy_terms">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+    
+</body>
+</html>

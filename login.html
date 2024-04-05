@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Futures Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="navbar">
+        <header>Futures Fashion</header>
+        <h3><a href="index.html" class="fa fa-home">Home</a></h3>
+    </div>
+
+    <div class="heading">
+        <h1 style="margin-left: 50px;">Login or Signup</h1>
+        <h1>To Explore Futures Fashion</h1><br>
+    </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="social"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+                    <a href="#" class="social"><i class="fa fa-twitter"></i></a>
+                </div>
+                <span>or use email for registration</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Sing Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-icons">
+                    <a href="#" class="social"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+                    <a href="#" class="social"><i class="fa fa-twitter"></i></a>
+                </div>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#" style="text-decoration: underline;">Forget Your Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h2>Welcome Back!</h2>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h2>Hello, Friend!</h2>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footerbottom">
+            <div class="footbot-txt">
+              <span class="copyright_text">Copyright &#169; 2024 <a href="#">Futures Fashion.</a>All Rights Reserved</span>
+              <span class="Policy_terms">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+              </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+<script>
+    const container = document.getElementById('container');
+    const registerBtn = document.getElementById('register');
+    const loginBtn = document.getElementById('login');
+
+    registerBtn.addEventListener('click',() =>{
+        container.classList.add("active");
+    });
+
+    loginBtn.addEventListener('click',() =>{
+        container.classList.remove("active");
+    });
+</script>
